@@ -1,0 +1,18 @@
+.ListItem{
+    width: 258px;
+    min-height: 35px;
+    /* left: 12px;
+    top: 44px; */
+    
+    background: #FFFFFF;
+    border-radius: 5px;
+    border-style: none;
+
+    margin-bottom: 15px;
+    padding: 7px 8px;
+
+    font-size: 18px;
+    line-height: 21px;
+    
+    color: #000000;
+}

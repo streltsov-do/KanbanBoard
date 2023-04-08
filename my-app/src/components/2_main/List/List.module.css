@@ -1,0 +1,18 @@
+.List{
+    width: 282px;
+    height: 197px;
+
+    background: #EBECF0;
+    border-radius: 10px;
+
+    padding: 12px 12px 8px 12px;
+}
+
+.title{
+    margin-bottom: 15px;
+    
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #000000;
+}

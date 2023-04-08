@@ -1,0 +1,15 @@
+.main{
+    /* position: absolute; */
+    /* width: 1235px; */
+    height: 500px;
+    /* left: 0px;
+    top: 0px; */
+    padding: 20px 0 0 19px;
+
+    display: flex;
+    gap: 24px;
+    
+
+    background: #0079BF;
+}
+

@@ -1,0 +1,26 @@
+.App {
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+body * {
+  box-sizing: border-box;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+}
+
+body {
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.root {
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+}
