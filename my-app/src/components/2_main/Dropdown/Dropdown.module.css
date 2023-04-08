@@ -1,0 +1,18 @@
+.container{
+    border-radius: 5px;
+    background: #FFFFFF;
+}
+
+.title{
+    margin-bottom: 15px;
+    
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #000000;
+}
+
+.arrowdown{
+    width: 18px;
+    height: 12.5px;
+}

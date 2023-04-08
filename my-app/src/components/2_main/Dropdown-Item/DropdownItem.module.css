@@ -1,0 +1,43 @@
+.DropTitle{
+    width: 258px;
+    min-height: 35px;
+    margin-bottom: 3px;
+    
+    background: #FFFFFF;
+    border-radius: 5px;
+    border-style: none;
+
+    padding: 12.5px 11px 0px 0px;
+    /* font-size: 18px;
+    line-height: 11px; */
+    
+    /* text-align: end; */
+    display: flex;
+    justify-content: end;
+    /* vertical-align: top; */
+
+}
+
+.DropTitle:hover{
+    background: #DEDEDE;
+}
+
+.DropItem{
+    width: 258px;
+    min-height: 35px;
+    
+    background: #FFFFFF;
+    border-radius: 5px;
+    border-style: none;
+
+    padding: 7px 8px;
+    font-size: 18px;
+    line-height: 21px;
+    
+    color: #000000;
+}
+
+.DropItem:hover{
+    background: #DEDEDE;
+}
+

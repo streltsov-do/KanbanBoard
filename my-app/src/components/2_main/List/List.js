@@ -12,39 +12,23 @@ class List extends React.Component{
             data: [],
             index: 10
         };
-        this.add_ListItem = this.add_ListItem.bind(this)
-    }
-
-    add_ListItem(item) {
-        const {data, index} = this.state;
-        let data_add = this.props;
-        console.log("p0",data_add);
-        console.log("p0-0",data_add.prop.issues[0]);
-        let item_good = {
-            id: index+1,
-            name: item,
-            desc: 'no desc at all'
-        }
-        data_add.prop.issues.push(item_good);
-        console.log("p1",data_add);
-        this.setState({data:data_add, index:index+1});
     }
 
     render(){
 
-        const { prop, idx } = this.props;
-
+        const { arrayIssues, arrayIndex , arrayIssuesPrev, itemsChange } = this.props;
 
         return(
             <div className={css.List}>
-                <div className={css.title}>{prop.title}</div>
-                {prop.issues.map(item => (
-                    <ListItem props={item} key={item.id}>Nealo</ListItem>
+                <div className={css.title}>{arrayIssues.title}</div>
+                {arrayIssues.issues.map(item => (
+                    <ListItem items={item} key={item.id}></ListItem>
                 ))}
                 <AddCard 
-                    prop={prop} 
-                    idx={idx} 
-                    add_ListItem={this.add_ListItem} 
+                    arrayIssues={arrayIssues} 
+                    arrayIndex={arrayIndex} 
+                    arrayIssuesPrev={arrayIssuesPrev}
+                    itemsChange={itemsChange} 
                 />
             </div>
         )

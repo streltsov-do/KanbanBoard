@@ -7,15 +7,25 @@ import List from "./List/List";
 class AwesomeMain extends React.Component{
     constructor(props) {
         super(props)
+        this.state = {
+            data: [],
+            index: 10
+        };
     }
 
     render () {
-        const { prop } = this.props;
+        const { items, itemsChange } = this.props;
 
         return(
             <div className={css.main}>
-                {prop.map((item,index) => (
-                    <List key={item.title} prop={item} idx={index}></List>
+                {items.map((item,index) => (
+                    <List 
+                        key={item.title} 
+                        arrayIssues={item} 
+                        arrayIndex={index} 
+                        arrayIssuesPrev={items[index-1]}
+                        itemsChange={itemsChange}
+                    />
                 ))}
             </div>
         )

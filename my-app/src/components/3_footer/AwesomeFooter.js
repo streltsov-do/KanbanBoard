@@ -3,14 +3,14 @@ import React from "react";
 import css from './AwesomeFooter.module.css'
 
 class AwesomeFooter extends React.Component{
-    constructor(props) {
-        super(props)
-    }
+    // constructor(props) {
+    //     super(props)
+    // }
 
     render () {
-        const { prop } = this.props;
-        const t_N = prop[0].issues.length;
-        const t_M = prop[3].issues.length;
+        const { items } = this.props;
+        const t_N = items[0].issues.length;
+        const t_M = items[3].issues.length;
         const t_Name = "Denis";
         const t_Year = "2023";
         return(

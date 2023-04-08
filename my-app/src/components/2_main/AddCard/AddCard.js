@@ -3,49 +3,69 @@ import React from "react";
 import cssItem from '../ListItem/ListItem.module.css';
 import css from './AddCard.module.css';
 import plus from "./AddCard.svg"
-import arrowdown from "./Dropdown_Arrow.svg"
+
+import Dropdown from "../Dropdown/Dropdown";
 
 class AddCard extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
             clicked: false,
-            text_entered: false
+            text_entered: false,
+            empty: false
         }
         this.inputRef = React.createRef();
+        this.setCLicked = this.setCLicked.bind(this)
+    }
+
+    setCLicked(bool) {
+        let empty=false;
+        if (this.props.arrayIndex!==0){
+            if (this.props.arrayIssuesPrev.issues.length==0){
+                empty=true;
+            }
+        }
+        this.setState({
+            clicked : bool,
+            empty : empty
+        })
+    }
+
+    static getDerivedStateFromProps(props, state) {
+        const {arrayIssuesPrev} = props;
+        // console.log("ARRAR",arrayIssuesPrev)
+        let empty=false;
+        if (props.arrayIndex!==0){
+            empty=false
+            if (arrayIssuesPrev.issues.length==0){
+                empty=true;
+                // console.log("TRUE",arrayIssuesPrev.issues.length)
+            }
+        }
+        // this.setState({
+        //     empty : empty
+        // })
+        return {
+            empty: empty
+        }
     }
 
     render(){
         const {clicked,text_entered} = this.state
-        const {prop, idx, add_ListItem} = this.props;
-    
-        const handleClick_Add = () => {
-            // console.log("alo2");
-            // console.log(clicked);
+        const {arrayIssues, arrayIndex, arrayIssuesPrev, itemsChange} = this.props;
 
-            this.setState({
-                clicked : true
-            })
-        }
-        
         const handleClick_Submit = () => {
-            this.setState({
-                clicked: false,
-                text_entered : false
-            })
-            if (idx==0) {
-                add_ListItem(this.inputRef.current.value)
+            if (text_entered){
+                this.setState({
+                    clicked: false,
+                    text_entered : false
+                })
+                this.props.itemsChange(0,this.inputRef.current.value)
+                this.inputRef.current.value=""
             }
-            this.inputRef.current.value=""
-
         }
 
-        const handleInput = (e) => {
-            // console.log("alo1",this.inputRef.current);
-            // console.log("alo1v",this.inputRef.current.value);
-            // const value=this.inputRef.current.value;
-            // console.log("alo1vt",value);
-            
+        const handleInput = (e) => {            
             this.setState({
                 text_entered: (this.inputRef.current.value!=="")
             })
@@ -60,28 +80,49 @@ class AddCard extends React.Component {
             return out
         }
 
-        const Submit_class = `${css.AddCard} ${css.Submit}`
+        const submitClass = `${css.AddCard} ${css.Submit}`
 
         return(
             <>
                 {clicked?
-                        <input 
-                            ref={this.inputRef}
-                            className={cssItem.ListItem} 
-                            placeholder={AddName_placeholder()}
-                            onChange={handleInput}
-                        >
-                        </input>
+                       (arrayIndex===0)? 
+                            <input 
+                                ref={this.inputRef}
+                                className={cssItem.ListItem} 
+                                placeholder={AddName_placeholder()}
+                                onChange={handleInput}
+                            >
+                            </input>
+                        :
+                            <>
+                                {/* <DropdownItem></DropdownItem> */}
+                                <Dropdown 
+                                    arrayIssuesPrev={arrayIssuesPrev} 
+                                    arrayIndex={arrayIndex} 
+                                    itemsChange={itemsChange}
+                                    closeDrop={this.setCLicked}
+                                />
+                            </>
                     :
                         null
                 }
                 {
-                    text_entered?
-                        <button className={Submit_class} onClick={handleClick_Submit}>
-                            Submit
-                        </button>
+                    clicked?
+                        (arrayIndex==0)?
+                            <button 
+                                className={submitClass} 
+                                onClick={handleClick_Submit}
+                            >
+                                Submit
+                            </button>
+                        :
+                        <></>
                     :
-                        <button className={css.AddCard} onClick={handleClick_Add}>
+                        <button 
+                            className={css.AddCard} 
+                            onClick={() => this.setCLicked(true)}
+                            disabled={this.state.empty==true}
+                        >
                             <img src={plus} alt="+" className={css.plus}/>
                             <div>Add card</div>
                         </button>
