@@ -26,8 +26,8 @@ class AddCard extends React.Component {
             }
         }
         this.setState({
-            clicked : bool,
-            empty : empty
+            clicked : !bool,
+            empty   : empty
         })
     }
 
@@ -120,7 +120,7 @@ class AddCard extends React.Component {
                     :
                         <button 
                             className={css.AddCard} 
-                            onClick={() => this.setCLicked(true)}
+                            onClick={() => this.setCLicked(false)}
                             disabled={this.state.empty==true}
                         >
                             <img src={plus} alt="+" className={css.plus}/>

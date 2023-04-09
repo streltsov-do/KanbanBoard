@@ -28,7 +28,7 @@ class DropdownItem extends React.Component{
             handleClickClose();
         }
         const handleClickClose = () => {
-            this.props.closeDrop(false)
+            this.props.closeDrop(true)
             // itemsChange(name)
         }
 
