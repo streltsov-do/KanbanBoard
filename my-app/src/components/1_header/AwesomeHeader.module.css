@@ -1,24 +1,21 @@
 .header{
     /* position: absolute; */
-    /* width: 1235px; */
+    width: 100vw;
     height: 55px;
 
-    /* padding-top: 11px; */
-    padding-left: 20px;
-    padding-right: 23.21px;
+    padding: 5px 20px 5px 23.21px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     
     background: #0067A3;
 }
 
 .title{
     width: 331px;
-    height: 26px;
-    
-    /* margin-top: 11px; */
-    /* margin-left: 20px; */
-
-    padding-top: 11px;
-    /* padding-left: 20px; */
+    height: 45px;
+    display: flex;
+    align-items: center;
 
     font-family: 'Roboto';
     font-style: normal;
@@ -29,7 +26,64 @@
     color: #FFFFFF;
 }
 
+.btnUserContainer{
+    position: relative;
+}
+
+.btnUser{
+    width: 64px;
+    height: 40px;
+    padding: 0 6px 0 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: transparent;
+    border-style: none;
+}
+
+.btnUser:hover{
+    transform: scale(1.1);
+}
+.avatarContainer{
+    height: 38.4px;
+    width:  38.4px;
+    position: relative;
+}
+.avatar{
+    height: 38.4px;
+    width:  38.4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 .icon{
     height: 38.4px;
     width:  38.4px;
+}
+
+.dropdown{
+    position: absolute;
+    padding-top: 11px;
+    right: 0;
+    z-index: 99;
+}
+
+.selector_img{
+    position: absolute;
+    left: 82px;
+    /* border-style: dashed; */
+    top: 3px;
+}
+.selector{
+    width: 134px;
+    height: 60px;
+    padding: 8px 7px;
+    background: #FFFFFF;
+    border-radius: 5px;
+}
+.selector select{
+    border-style: none;
+    font-size: 14px;
+    line-height: 16px;
 }

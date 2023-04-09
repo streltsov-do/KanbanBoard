@@ -1,7 +1,6 @@
 import React, { createRef } from "react";
 
 import css from "./ItemDesc.module.css"
-import closeImg from "./closeImg.svg"
 import Line1 from "./Line1.svg"
 import Line2 from "./Line2.svg"
 
@@ -13,15 +12,11 @@ class ItemDesc extends React.Component {
 
     handleClickExit = () => {
         this.props.detailedShow(false)
-        // this.p
     }
     
     handleInput = () => {
         const {bool, arrayIndex, id, name, desc} = this.props
 
-        // console.log("4 arrayIndex",arrayIndex)
-        // console.log("4 id",id)
-        // console.log("4 desc",this.inputRef.current.value)
         this.props.detailedChange(arrayIndex, id, this.inputRef.current.value)
     }
 
@@ -40,12 +35,14 @@ class ItemDesc extends React.Component {
                         <img src={Line2} className={css.imgX}></img>
                     </button>
                 </div>
-                <input 
+                <textarea 
                     ref={this.inputRef}
                     type="text" 
                     className={css.desc} 
                     defaultValue={desc} 
                     onChange={this.handleInput}
+                    cols="45"
+                    rows="14"
                 />
             </div>
         )

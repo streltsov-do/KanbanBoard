@@ -9,7 +9,7 @@ class Dropdown extends React.Component{
         super(props)
         // this.inputRef = React.createRef();
 
-        this.state = { selected: null };
+        // this.state = { selected: null };
         this.handleClickAdd = this.handleClickAdd.bind(this)
     }
 

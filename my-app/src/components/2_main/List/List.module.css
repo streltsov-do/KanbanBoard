@@ -1,12 +1,14 @@
 .List{
     /* width: 282px; */
     min-width: 282px;
-    height: 197px;
+    min-height: 197px;
+    max-height: 60vh;
 
     background: #EBECF0;
     border-radius: 10px;
 
     padding: 12px 12px 8px 12px;
+    overflow-y: auto;
 }
 
 .title{

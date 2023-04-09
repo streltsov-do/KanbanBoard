@@ -1,4 +1,9 @@
 import React from "react";
+import {
+    createBrowserRouter,
+    RouterProvider,
+  } from "react-router-dom";
+
 import css from './List.module.css';
 
 import ListItem from "../ListItem/ListItem";
@@ -6,13 +11,13 @@ import AddCard from "../AddCard/AddCard";
 
 
 class List extends React.Component{
-    constructor(props){
-        super(props);
-        this.state = {
-            data: [],
-            index: 10
-        };
-    }
+    // constructor(props){
+    //     super(props);
+    //     this.state = {
+    //         data: [],
+    //         index: 10
+    //     };
+    // }
 
     render(){
 

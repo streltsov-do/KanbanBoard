@@ -35,9 +35,11 @@ class App extends React.Component{
         ]
 
         this.state = {
-            data: dataArray,
             // data: dataMock,
-            index: 10,
+            // index: 13,
+            
+            data: dataArray,
+            index: 0,
 
         };
         this.itemsChange = this.itemsChange.bind(this)
@@ -54,8 +56,7 @@ class App extends React.Component{
             name:   val,
             desc:   'This task has no description'
         }
-        // console.log("dataArray[arrayIndex-1].issues.length",dataArray[arrayIndex-1].issues.length)
-        // console.log("dataArray[arrayIndex-1].issues",dataArray[arrayIndex-1].issues)
+
         if (arrayIndex!==0){
             let name="";
             let desc="";
@@ -63,8 +64,6 @@ class App extends React.Component{
                 if (dataArray[arrayIndex-1].issues[i].id==val){
                     name = dataArray[arrayIndex-1].issues[i].name
                     desc = dataArray[arrayIndex-1].issues[i].desc
-                    // console.log("name",name)
-                    // console.log("desc",desc)
                     dataArray[arrayIndex-1].issues.splice(i,1)
                 }
             }
@@ -92,7 +91,8 @@ class App extends React.Component{
 
         for (var i=0;i<dataArray[arrayIndex].issues.length;i++){
             if (dataArray[arrayIndex].issues[i].id==id){
-                dataArray[arrayIndex].issues[i].desc=desc;
+                let desc_fin= (desc=="")?('This task has no description'):desc;
+                dataArray[arrayIndex].issues[i].desc=desc_fin;
                 return
             }
         }
