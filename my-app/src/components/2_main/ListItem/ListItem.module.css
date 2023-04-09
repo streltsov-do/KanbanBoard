@@ -12,7 +12,12 @@
     padding: 7px 8px;
 
     font-size: 18px;
+    text-align: left;
     line-height: 21px;
     
     color: #000000;
+}
+
+.ListItem:hover{
+    background-color: bisque;
 }

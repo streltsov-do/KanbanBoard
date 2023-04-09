@@ -71,7 +71,7 @@ class Dropdown extends React.Component{
                 <select 
                     className={css.DropTitle} 
                     onChange={this.handleClickAdd} 
-                    defaultValue={this.state.selected || ''}
+                    // defaultValue={this.state.selected || ''}
                     // value={this.state.selected || ''}
                 >
                     <option value="" key="empty" className={css.DropEmpty}></option>
@@ -79,14 +79,7 @@ class Dropdown extends React.Component{
                         <option 
                             value = {item.id} 
                             className={css.DropItem}
-                            // ref={this.inputRef}
-                            // item={item} 
                             key={item.id} 
-                            // title={false}
-                            // arrayIndex={arrayIndex}
-                            // itemsChange={itemsChange}
-                            // closeDrop={closeDrop}
-                            // onClick={handleClickAdd}
                         >
                             {item.name}
                         </option>

@@ -7,10 +7,22 @@ class ListItem extends React.Component{
     //     super(props)
     // }
 
-    render () {
+    handleClick= () => {
         const {id, name, desc} = this.props.items
+        
+        this.props.detailedShow(true, this.props.arrayIndex, id, name, desc)
+    }
+
+    render () {
+        const {arrayIndex, id, name, desc} = this.props.items
         return(
-            <div className={css.ListItem} key={id}>{name}</div>
+            <button 
+                className={css.ListItem} 
+                key={id} 
+                onClick={this.handleClick}
+            >
+                {name}
+            </button>
         )
     }
 }

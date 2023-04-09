@@ -16,19 +16,25 @@ class List extends React.Component{
 
     render(){
 
-        const { arrayIssues, arrayIndex , arrayIssuesPrev, itemsChange } = this.props;
+        const { arrayIssues, arrayIndex , arrayIssuesPrev, itemsChange, detailedShow, detailedChange } = this.props;
 
         return(
             <div className={css.List}>
                 <div className={css.title}>{arrayIssues.title}</div>
                 {arrayIssues.issues.map(item => (
-                    <ListItem items={item} key={item.id}></ListItem>
+                    <ListItem
+                        arrayIndex={arrayIndex} 
+                        items={item} 
+                        key={item.id}
+                        detailedShow={detailedShow}
+                        detailedChange={detailedChange}
+                    />
                 ))}
                 <AddCard 
                     arrayIssues={arrayIssues} 
                     arrayIndex={arrayIndex} 
                     arrayIssuesPrev={arrayIssuesPrev}
-                    itemsChange={itemsChange} 
+                    itemsChange={itemsChange}
                 />
             </div>
         )

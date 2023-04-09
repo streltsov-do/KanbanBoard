@@ -10,11 +10,38 @@ import dataMock from "./components/dataMock";
 class App extends React.Component{
     constructor(props) {
         super(props)
+        
+        const dataArray = [
+            {
+                title: 'Backlog',
+                issues: [
+                ]
+            },
+            {
+                title: 'Ready',
+                issues: [
+                ]
+            },
+            {
+                title: 'In Progress',
+                issues: [
+                ]
+            },
+            {
+                title: 'Finished',
+                issues: [
+                ]
+            },
+        ]
+
         this.state = {
-            data: dataMock,
-            index: 10
+            data: dataArray,
+            // data: dataMock,
+            index: 10,
+
         };
         this.itemsChange = this.itemsChange.bind(this)
+        this.detailedChange = this.detailedChange.bind(this)
     }
   
     itemsChange(arrayIndex,val) {
@@ -25,7 +52,7 @@ class App extends React.Component{
         let item_new = {
             id:     index,
             name:   val,
-            desc:   'no desc at all'
+            desc:   'This task has no description'
         }
         // console.log("dataArray[arrayIndex-1].issues.length",dataArray[arrayIndex-1].issues.length)
         // console.log("dataArray[arrayIndex-1].issues",dataArray[arrayIndex-1].issues)
@@ -55,6 +82,23 @@ class App extends React.Component{
         this.setState({data:dataArray});
     }
 
+    detailedChange(arrayIndex,id,desc) {
+        
+        const {data, index} = this.state;
+
+        let dataArray = data;
+
+        let name="";
+
+        for (var i=0;i<dataArray[arrayIndex].issues.length;i++){
+            if (dataArray[arrayIndex].issues[i].id==id){
+                dataArray[arrayIndex].issues[i].desc=desc;
+                return
+            }
+        }
+        this.setState({data:dataArray});
+    }
+
     render() {
         return (
             <>
@@ -62,7 +106,9 @@ class App extends React.Component{
                 <AwesomeMain 
                     items={this.state.data}
                     itemsChange={this.itemsChange}
+                    detailedChange={this.detailedChange}
                 />
+                
                 <AwesomeFooter 
                     items={this.state.data}
                 />
