@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter } from "react-router-dom";
 import './App.css'
 
 import AwesomeHeader  from "./components/1_header/AwesomeHeader";
@@ -11,7 +12,7 @@ class App extends React.Component{
     constructor(props) {
         super(props)
         
-        const dataArray = [
+        const dataArrayDef = [
             {
                 title: 'Backlog',
                 issues: [
@@ -38,14 +39,57 @@ class App extends React.Component{
             // data: dataMock,
             // index: 13,
             
-            data: dataArray,
+            data: dataArrayDef,
             index: 0,
 
         };
         this.itemsChange = this.itemsChange.bind(this)
         this.detailedChange = this.detailedChange.bind(this)
+        this.dataArrayChange = this.dataArrayChange.bind(this)
     }
-  
+
+    componentDidMount() {
+        
+        const dataArrayDef = [
+            {
+                title: 'Backlog',
+                issues: [
+                ]
+            },
+            {
+                title: 'Ready',
+                issues: [
+                ]
+            },
+            {
+                title: 'In Progress',
+                issues: [
+                ]
+            },
+            {
+                title: 'Finished',
+                issues: [
+                ]
+            },
+        ]
+
+        let dataArray = localStorage.getItem('dataArray') 
+        dataArray=JSON.parse(dataArray);
+        console.log(dataArray);
+        if (dataArray!==null)
+            this.setState({data:dataArray});
+        else 
+            this.setState({data:dataArrayDef});
+            
+    }
+
+    dataArrayChange(dataArray) {
+        console.log(dataArray)
+        localStorage.setItem("dataArray",JSON.stringify(dataArray))
+        this.setState({data:dataArray});
+    }
+
+
     itemsChange(arrayIndex,val) {
         const {data, index} = this.state;
 
@@ -78,7 +122,8 @@ class App extends React.Component{
         }
         
         dataArray[arrayIndex].issues.push(item_new);
-        this.setState({data:dataArray});
+        // this.setState({data:dataArray});
+        this.dataArrayChange(dataArray);
     }
 
     detailedChange(arrayIndex,id,desc) {
@@ -96,12 +141,12 @@ class App extends React.Component{
                 return
             }
         }
-        this.setState({data:dataArray});
+        // this.setState({data:dataArray});
+        this.dataArrayChange(dataArray);
     }
-
     render() {
         return (
-            <>
+            <BrowserRouter>
                 <AwesomeHeader/>
                 <AwesomeMain 
                     items={this.state.data}
@@ -112,7 +157,7 @@ class App extends React.Component{
                 <AwesomeFooter 
                     items={this.state.data}
                 />
-            </>
+            </BrowserRouter>
         );
 }
 }

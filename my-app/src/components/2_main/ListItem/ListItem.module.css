@@ -1,8 +1,10 @@
 .ListItem{
+    
     width: 258px;
     min-height: 35px;
     /* left: 12px;
     top: 44px; */
+    display: block;
     
     background: #FFFFFF;
     border-radius: 5px;
@@ -14,6 +16,13 @@
     font-size: 18px;
     text-align: left;
     line-height: 21px;
+    list-style: none;
+    text-decoration: none;
+    
+    color: #000000;
+}
+.LinkItem{
+    text-decoration: none;
     
     color: #000000;
 }

@@ -2,6 +2,7 @@ import React from "react";
 import {
     createBrowserRouter,
     RouterProvider,
+    Router, Route, Link
   } from "react-router-dom";
 
 import css from './List.module.css';
@@ -26,15 +27,17 @@ class List extends React.Component{
         return(
             <div className={css.List}>
                 <div className={css.title}>{arrayIssues.title}</div>
-                {arrayIssues.issues.map(item => (
-                    <ListItem
-                        arrayIndex={arrayIndex} 
-                        items={item} 
-                        key={item.id}
-                        detailedShow={detailedShow}
-                        detailedChange={detailedChange}
-                    />
-                ))}
+                <ul>
+                    {arrayIssues.issues.map(item => (
+                        <ListItem
+                            arrayIndex={arrayIndex} 
+                            items={item} 
+                            key={item.id}
+                            detailedShow={detailedShow}
+                            detailedChange={detailedChange}
+                        />
+                    ))}
+                </ul>
                 <AddCard 
                     arrayIssues={arrayIssues} 
                     arrayIndex={arrayIndex} 

@@ -11,6 +11,10 @@
     overflow-y: auto;
 }
 
+.List Ul{
+    padding: 0;
+}
+
 .title{
     margin-bottom: 15px;
     

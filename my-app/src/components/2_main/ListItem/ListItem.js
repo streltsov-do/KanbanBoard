@@ -1,11 +1,14 @@
 import React from "react";
+import { Link, Route, Routes} from "react-router-dom";
+
+import ItemDesc from "../ItemDesc/ItemDesc";
 
 import css from './ListItem.module.css';
 
 class ListItem extends React.Component{
-    // constructor(props){
-    //     super(props)
-    // }
+    constructor(props){
+        super(props)
+    }
 
     handleClick= () => {
         const {id, name, desc} = this.props.items
@@ -16,13 +19,20 @@ class ListItem extends React.Component{
     render () {
         const {arrayIndex, id, name, desc} = this.props.items
         return(
-            <button 
-                className={css.ListItem} 
-                key={id} 
-                onClick={this.handleClick}
-            >
-                {name}
-            </button>
+            <>
+                {/* <li 
+                    className={css.ListItem} 
+                    key={id} 
+                > */}
+                    <Link 
+                        className={css.ListItem} 
+                        key={id} to={`/tasks/${id}`} 
+                        onClick={this.handleClick}
+                    >
+                        {name}
+                    </Link>
+                {/* </li> */}
+            </>
         )
     }
 }
