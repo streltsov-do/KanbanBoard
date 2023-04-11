@@ -21,7 +21,6 @@ class ItemDesc extends React.Component {
 
     render() {
         const {bool, arrayIndex, id, name, desc} = this.props
-
         return (
             (id!=="")?
                 <div className={css.ItemDesc}>

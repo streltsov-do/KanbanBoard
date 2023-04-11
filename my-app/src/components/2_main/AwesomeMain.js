@@ -20,15 +20,21 @@ class AwesomeMain extends React.Component{
         this.detailedShow = this.detailedShow.bind(this)
     }
 
+    componentDidMount() {
+        let detailed = localStorage.getItem('detailed') 
+        detailed=JSON.parse(detailed);
+        this.setState({
+            detailedArrayIndex  : detailed.detailedArrayIndex,
+            detailedId          : detailed.detailedId        ,
+            detailedName        : detailed.detailedName      ,
+            detailedDesc        : detailed.detailedDesc      ,
+        })
+    }
 
     detailedShow(bool, arrayIndex, id, name, desc) {
         this.setState({
             detailed:bool
         })
-        console.log("arrayIndex",arrayIndex)
-        console.log("id",id)
-        console.log("name",name)
-        console.log("desc",desc)
         if (bool) {
             this.setState({
                 detailedArrayIndex: arrayIndex,
@@ -37,6 +43,14 @@ class AwesomeMain extends React.Component{
                 detailedDesc: desc,
             })
         }
+        
+        const detailed={
+            detailedArrayIndex: arrayIndex,
+            detailedId: id,
+            detailedName: name,
+            detailedDesc: desc,
+        }
+        localStorage.setItem("detailed",JSON.stringify(detailed))
     }
     
     render () {

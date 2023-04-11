@@ -12,8 +12,9 @@ class ListItem extends React.Component{
 
     handleClick= () => {
         const {id, name, desc} = this.props.items
+        const {arrayIndex} = this.props
         
-        this.props.detailedShow(true, this.props.arrayIndex, id, name, desc)
+        this.props.detailedShow(true, arrayIndex, id, name, desc)
     }
 
     render () {
