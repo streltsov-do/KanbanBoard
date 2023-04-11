@@ -12,6 +12,8 @@
     border-radius: 10px;
     /* margin-top: 17px; */
     margin-bottom: 8px;
+    border-radius: 5px;
+    background-color: rgb(164, 252, 200);
 }
 
 .AddCard:hover{
@@ -35,6 +37,7 @@
     width: 100px;
     display: flex;
     justify-content: center;
+    border-radius: 5px;
 }
 
 

@@ -1,12 +1,13 @@
 .awesomeMain{
     /* position: absolute; */
     /* width: 1235px; */
-    height: 600px;
-  height: calc(95vh - 55px*2);
+    /* height: 600px; */
+    height: calc(100% - 55px*2);
     /* left: 0px;
     top: 0px; */
     padding: 20px 0 32px 19px;
     position: relative;
+    /* height: 100%; */
 
     /* display: flex; */
     /* gap: 24px; */
@@ -14,16 +15,10 @@
 
     background: #0079BF;
 }
-.main{
-    
-    margin: 0;
-    padding: 0;
-    position: relative;
 
-    display: flex;
-    gap: 24px;
-    
-
-    background: #0079BF;
+@media screen and (width <= 505px) {
+    .awesomeMain{
+        padding: 20px 35px 32px 21px;
+        min-height: 100vh;
+    }
 }
-

@@ -22,6 +22,8 @@ class AwesomeHeader extends React.Component{
     }
 
     render () {
+        const {dropEn} = this.state
+        const transform = dropEn?180:0;
         return(
             <div className={css.header}>
                 <div className={css.title}>Awesome Kanban Board</div>
@@ -31,10 +33,13 @@ class AwesomeHeader extends React.Component{
                             <img className={css.avatar} src={ellipse}></img>
                             <img className={css.avatar} src={avatar}></img>
                         </div>
-                        <img src={avatarArrow}></img>
+                        <img 
+                            style={{ 'transform': `rotate(${transform}deg`}} 
+                            src={avatarArrow}
+                        ></img>
                     </button>
                     {
-                        (this.state.dropEn)?
+                        dropEn?
                             <div className={css.dropdown}>
                                 <img className={css.selector_img} src={rectangle}></img>
                                 <div className={css.selector}>

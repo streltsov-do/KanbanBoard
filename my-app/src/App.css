@@ -1,7 +1,7 @@
-.App {
+/* .App {
   display: flex;
   flex-direction: column;
-}
+} */
 
 
 body * {
@@ -12,19 +12,32 @@ body * {
   font-weight: 400;
 }
 
+html{
+  height: 100%;
+  width: 100%;
+}
 body {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
 
-  height: auto;
+  height: 100%;
   width: 100%;
 }
 
-.root {
-  display: flex;
-  flex-direction: column;
+#root {
+  /* display: flex;
+  flex-direction: column; */
+  height: 100%;
+  width: 100%;
 }
 
 button{
   cursor: pointer
+}
+
+@media screen and (width <= 505px) {
+  html{
+    height: auto;
+    /* width: 100%; */
+  }
 }

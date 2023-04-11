@@ -3,8 +3,7 @@ import { Route, Switch } from "react-router-dom";
 
 import css from './Main.module.css'
 
-import List from "./List/List";
-import ItemDesc from "./ItemDesc/ItemDesc";
+import List from "../List/List";
 
 class Main extends React.Component{
     constructor(props) {

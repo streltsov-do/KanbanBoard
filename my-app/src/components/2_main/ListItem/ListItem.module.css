@@ -30,3 +30,10 @@
 .ListItem:hover{
     background-color: bisque;
 }
+
+@media screen and (width <= 505px) {
+    .ListItem{
+        min-width: calc(100% - 12px - 12px);
+        width: auto;
+    }
+}

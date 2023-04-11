@@ -1,11 +1,11 @@
 import React from "react";
 import { Route, Routes, Switch } from "react-router-dom";
 
-import Main from "./Main";
+import Main from "./Main/Main";
 import ItemDesc from "./ItemDesc/ItemDesc";
 import NotFound from "./NotFound/NotFound";
 
-import css from './Main.module.css'
+import css from './AwesomeMain.module.css'
 
 class AwesomeMain extends React.Component{
     constructor(props) {

@@ -63,3 +63,12 @@
 
     color: #000000;
 }
+
+@media screen and (width <= 505px) {
+    .ItemDesc{
+        width: calc(85%);
+    }
+    .desc{
+        width: calc(70%);
+    }
+}

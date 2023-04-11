@@ -9,6 +9,8 @@
 
     padding: 12px 12px 8px 12px;
     overflow-y: auto;
+    overflow-x: hidden;
+    /* scrollbar-color: rebeccapurple green; */
 }
 
 .List Ul{
@@ -22,4 +24,38 @@
     line-height: 21px;
 
     color: #000000;
+}
+
+.List::-webkit-scrollbar {
+    width: 12px;               
+    height: 52px;   
+}
+.List::-webkit-scrollbar-track {
+    background: white;       
+    margin: 29px 0;
+}
+.List::-webkit-scrollbar-thumb {
+    background-color: #CBCBCB;
+    border-radius: 5px;    
+}
+
+
+.List::-webkit-scrollbar:horizontal {
+    width: 12px;               
+    height: 12px;   
+}
+.List::-webkit-scrollbar-track:horizontal {
+    background: white;       
+    margin: 29px 0;
+}
+.List::-webkit-scrollbar-thumb:horizontal {
+    background-color: #CBCBCB;
+    border-radius: 5px;    
+}
+
+@media screen and (width <= 505px) {
+    .List{
+        min-width: calc(100% - 21px - 35px);
+        height: 249px;
+    }
 }

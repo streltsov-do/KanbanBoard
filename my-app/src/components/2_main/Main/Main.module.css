@@ -1,0 +1,19 @@
+.main{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    /* height: 600px; */
+    /* height: calc(100% - 55px*2); */
+    height: 100%;
+
+    display: flex;
+    gap: 24px;
+    
+    /* background: #0079BF; */
+}
+
+@media screen and (width <= 505px) {
+    .main{
+        flex-direction: column;
+    }
+}
