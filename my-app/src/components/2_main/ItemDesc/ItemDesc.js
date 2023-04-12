@@ -1,5 +1,6 @@
-import React, { createRef } from "react";
-import { Link, Route, Routes } from "react-router-dom";
+import React from "react";
+// import { createRef } from "react";
+import { Link} from "react-router-dom";
 
 import NotFound from "../NotFound/NotFound";
 
@@ -27,8 +28,8 @@ class ItemDesc extends React.Component {
                     <div className={css.head}>
                         <span className={css.title}>{name}</span>
                         <Link to="/" className={css.buttonX}>
-                            <img src={Line1} className={css.imgX}></img>
-                            <img src={Line2} className={css.imgX}></img>
+                            <img src={Line1} className={css.imgX} alt="\"></img>
+                            <img src={Line2} className={css.imgX} alt="/"></img>
                         </Link>
                     </div>
                     <textarea 

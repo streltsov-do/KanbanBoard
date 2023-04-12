@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes, Switch } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import Main from "./Main/Main";
 import ItemDesc from "./ItemDesc/ItemDesc";
@@ -22,13 +22,17 @@ class AwesomeMain extends React.Component{
 
     componentDidMount() {
         let detailed = localStorage.getItem('detailed') 
-        detailed=JSON.parse(detailed);
-        this.setState({
-            detailedArrayIndex  : detailed.detailedArrayIndex,
-            detailedId          : detailed.detailedId        ,
-            detailedName        : detailed.detailedName      ,
-            detailedDesc        : detailed.detailedDesc      ,
-        })
+        // console.log("ddet",detailed);
+        if (detailed!==null){
+            // console.log("sar",detailed);
+            detailed=JSON.parse(detailed);
+            this.setState({
+                detailedArrayIndex  : detailed.detailedArrayIndex,
+                detailedId          : detailed.detailedId        ,
+                detailedName        : detailed.detailedName      ,
+                detailedDesc        : detailed.detailedDesc      ,
+            })
+        }
     }
 
     detailedShow(bool, arrayIndex, id, name, desc) {
@@ -62,6 +66,8 @@ class AwesomeMain extends React.Component{
             >
                 <Routes>
 
+                    <Route path="*" element={<NotFound/>} />
+
                     <Route exact path='/' 
                         element={
                             <Main 
@@ -83,7 +89,6 @@ class AwesomeMain extends React.Component{
                             />
                         }
                     ></Route>
-                    <Route path="*" element={<NotFound/>} />
                     
                 </Routes>
             </div>
