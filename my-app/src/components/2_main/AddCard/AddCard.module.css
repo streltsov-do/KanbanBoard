@@ -6,23 +6,24 @@
     display: flex;
     align-items: center;
     border-style:none;
-    background: #EBECF0;
+    /* background: #EBECF0; */
     /* width: 150px; */
 
     border-radius: 10px;
     /* margin-top: 17px; */
     margin-bottom: 8px;
     border-radius: 5px;
-    background-color: rgb(164, 252, 200);
+    /* background-color:#EBECF0; */
+    background-color:transparent;
 }
 
 .AddCard:hover{
-    background-color: rgb(104, 250, 165);
+    background-color: #FFFFFF;
 }
 
 .AddCard:disabled{
     cursor:initial;
-    background-color: rgb(255, 62, 104);
+    background-color: rgb(255, 211, 220);
 }
 
 .plus{

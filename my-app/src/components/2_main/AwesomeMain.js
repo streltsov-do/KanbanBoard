@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 
 import Main from "./Main/Main";
 import ItemDesc from "./ItemDesc/ItemDesc";
+import ItemDescWrap from "./ItemDesc/ItemDescWrap";
 import NotFound from "./NotFound/NotFound";
 
 import css from './AwesomeMain.module.css'
@@ -21,6 +22,7 @@ class AwesomeMain extends React.Component{
     }
 
     componentDidMount() {
+        // console.log("AwesomeMain DidMount")
         let detailed = localStorage.getItem('detailed') 
         // console.log("ddet",detailed);
         if (detailed!==null){
@@ -78,17 +80,29 @@ class AwesomeMain extends React.Component{
                             />
                         }
                     ></Route>
-                    <Route path='/tasks/:id' 
+                    {/* <Route path={`/tasks/${detailedId}`} */}
+                    <Route path='/tasks/:id'
                         element={
-                            <ItemDesc 
-                                detailedChange={this.props.detailedChange}
+                            // <ItemDesc 
+                            //     items={this.props.items}
+                            //     detailedChange={this.props.detailedChange}
+                            //     arrayIndex={detailedArrayIndex}
+                            //     id={detailedId}
+                            //     name={detailedName}
+                            //     desc={detailedDesc}
+                            // />
+                            <ItemDescWrap 
+                                items={this.props.items}
                                 arrayIndex={detailedArrayIndex}
                                 id={detailedId}
+                                detailedChange={this.props.detailedChange}
                                 name={detailedName}
                                 desc={detailedDesc}
                             />
                         }
                     ></Route>
+
+                    <Route path="/tasks/*" element={<NotFound/>} />
                     
                 </Routes>
             </div>

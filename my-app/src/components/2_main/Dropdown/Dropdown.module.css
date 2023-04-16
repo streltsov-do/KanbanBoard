@@ -65,3 +65,16 @@
     background: #DEDEDE;
 }
 
+.custom_select{
+    width: 258px;
+
+}
+
+.custom_select select {
+    /* display: none; */
+}
+
+.select-selected {
+    background-color: DodgerBlue;
+    background-color: rgb(184, 40, 107);
+}

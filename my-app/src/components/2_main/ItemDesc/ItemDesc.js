@@ -13,17 +13,41 @@ class ItemDesc extends React.Component {
         super(props)
         this.inputRef = React.createRef();
     }
-    
+
     handleInput = () => {
-        const {bool, arrayIndex, id, name, desc} = this.props
+        const {arrayIndex, id} = this.props
 
         this.props.detailedChange(arrayIndex, id, this.inputRef.current.value)
     }
 
     render() {
-        const {bool, arrayIndex, id, name, desc} = this.props
+        const {id} = this.props
+
+        let v_id = parseInt(id);
+        let v_data = localStorage.getItem("dataArray");
+        v_data = JSON.parse(v_data);
+        // console.log("ItemDesc:44 v_id",v_id)
+        // console.log("ItemDesc:44 v_data",v_data)
+        let name = "";
+        let desc = "";
+        let find = false;
+
+        for (var i=0;i<v_data.length;i++){
+            for (var j=0;j<v_data[i].issues.length;j++){
+                if (v_data[i].issues[j].id==v_id){
+                    
+                    name = v_data[i].issues[j].name
+                    desc = v_data[i].issues[j].desc
+
+                    find = true
+                }
+            }
+        }
+        
+        // console.log("ItemDesc:44 find:",find);
+
         return (
-            (id!=="")?
+            (find!==false)?
                 <div className={css.ItemDesc}>
                     <div className={css.head}>
                         <span className={css.title}>{name}</span>
@@ -47,35 +71,5 @@ class ItemDesc extends React.Component {
         )
     }
 }
-
-// class ItemDescNice extends React.Component {
-//     render() {
-//         const {bool, arrayIndex, id, name, desc,detailedChange} = this.props
-//         return (
-//             <Routes>
-//                 <Route 
-//                     path={`/tasks/${id}`}
-//                     element={
-//                         <ItemDesc 
-//                             detailedChange={detailedChange}
-//                             arrayIndex={arrayIndex}
-//                             id={id}
-//                             name={name}
-//                             desc={desc}
-//                         />
-//                     }
-//                 >
-//                 </Route>
-//                 {/* <Route
-//                     path='/tasks/:id' 
-//                         element={
-//                             <NotFound/>
-//                         }
-//                 >
-//                 </Route> */}
-//             </Routes>
-//         )
-//     }
-// }
 
 export default ItemDesc;

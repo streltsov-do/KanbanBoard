@@ -49,6 +49,7 @@ class App extends React.Component{
     }
 
     componentDidMount() {
+        // console.log("App DidMount")
         
         const dataArrayDef = [
             {
@@ -76,10 +77,16 @@ class App extends React.Component{
         let dataArray = localStorage.getItem('dataArray') 
         dataArray=JSON.parse(dataArray);
         
-        if (dataArray!==null)
+        if (dataArray!==null){
+            // console.log("APP: dataArray!==null")
+            // console.log(dataArray)
             this.setState({data:dataArray});
-        else 
+        }
+        else {
+            // console.log("APP: dataArray==NULL")
+            // console.log(dataArray)
             this.setState({data:dataArrayDef});
+        }
 
         let index = localStorage.getItem('index');
         index=JSON.parse(index);

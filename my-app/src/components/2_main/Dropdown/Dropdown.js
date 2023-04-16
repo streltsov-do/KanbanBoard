@@ -68,23 +68,25 @@ class Dropdown extends React.Component{
                         />
                     ))} */}
                 {/* </div> */}
-                <select 
-                    className={css.DropTitle} 
-                    onChange={this.handleClickAdd} 
-                    // defaultValue={this.state.selected || ''}
-                    // value={this.state.selected || ''}
-                >
-                    <option value="" key="empty" className={css.DropEmpty}></option>
-                    {arrayIssuesPrev.issues.map(item => (
-                        <option 
-                            value = {item.id} 
-                            className={css.DropItem}
-                            key={item.id} 
-                        >
-                            {item.name}
-                        </option>
-                    ))}
-                </select>
+                <div className={css.custom_select} style={{width:258+"px"}}>
+                    <select 
+                        className={css.DropTitle} 
+                        onChange={this.handleClickAdd} 
+                        // defaultValue={this.state.selected || ''}
+                        // value={this.state.selected || ''}
+                    >
+                        <option value="" key="empty" className={css.DropEmpty}></option>
+                        {arrayIssuesPrev.issues.map(item => (
+                            <option 
+                                value = {item.id} 
+                                className={css.DropItem}
+                                key={item.id} 
+                            >
+                                {item.name}
+                            </option>
+                        ))}
+                    </select>
+                </div>
             </>
         )
     }
