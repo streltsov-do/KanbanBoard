@@ -31,7 +31,6 @@
     position: relative;
     border-style: none;
     padding: 0;
-    margin-left: 23px;
     background: #FFFFFF;
 }
 .buttonX:hover{
@@ -39,7 +38,7 @@
 }
 .imgX{
     position: absolute;
-    left: 0;
+    right: 0;
     top: 0;
 }
 
@@ -48,19 +47,15 @@
     margin-bottom: 35px;
     font-size: 24px;
     line-height: 28px;
-
-    color: #000000;
+    word-wrap:break-word;
+    max-width: calc(100% - 25px - 5px);
 }
 
 .desc{
-    /* margin-top: 5px;
-    margin-bottom: 35px; */
     font-size: 18px;
     line-height: 21px;
     border-style: none;
-    min-width: calc(100% - 28px - 23px);
-    /* width: 500px; */
-    max-width: calc(5000px - 28px - 23px);
+    min-width: 100%;
     resize:none;
 
     color: #000000;

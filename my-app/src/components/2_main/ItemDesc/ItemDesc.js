@@ -1,5 +1,4 @@
 import React from "react";
-// import { createRef } from "react";
 import { Link} from "react-router-dom";
 
 import NotFound from "../NotFound/NotFound";
@@ -26,8 +25,6 @@ class ItemDesc extends React.Component {
         let v_id = parseInt(id);
         let v_data = localStorage.getItem("dataArray");
         v_data = JSON.parse(v_data);
-        // console.log("ItemDesc:44 v_id",v_id)
-        // console.log("ItemDesc:44 v_data",v_data)
         let name = "";
         let desc = "";
         let find = false;
@@ -43,8 +40,6 @@ class ItemDesc extends React.Component {
                 }
             }
         }
-        
-        // console.log("ItemDesc:44 find:",find);
 
         return (
             (find!==false)?

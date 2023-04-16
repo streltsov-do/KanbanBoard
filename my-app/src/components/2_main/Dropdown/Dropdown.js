@@ -15,23 +15,16 @@ class Dropdown extends React.Component{
 
 
     handleClickAdd(e) {
-        // arrayIssuesPrev.issues
-        // console.log("NAME", arrayIssuesPrev.issues[].name)
         this.props.itemsChange(
                 this.props.arrayIndex,
                 e.target.value,
-        //         name,
-        //         desc
         )
         this.props.closeDrop(true)
-        // items
-        // itemsChange(true,name)
-        
-        // handleClickClose();
     }
     
     render() {
         const {arrayIssuesPrev, arrayIndex, itemsChange, closeDrop} = this.props;
+
 
         const title = {
             id: "title",
@@ -39,23 +32,17 @@ class Dropdown extends React.Component{
             desc: ""
         }
 
-        // const options = [
-        //     {arrayIssuesPrev.issues.map(item => (
-        // ]
-
         return(
             <>
-                {/* <DropdownItem 
+                <DropdownItem 
                     item={title}
                     key={null}
                     title={true}
                     itemsChange={itemsChange}
                     closeDrop={closeDrop}
-                /> */}
-                    {/* <img src="arrowdown"/> */}
-                {/* </DropdownItem> */}
-                {/* <div className={css.container}> */}
-                    {/* {arrayIssuesPrev.issues.map(item => (
+                />
+                <div className={css.container}>
+                    {arrayIssuesPrev.issues.map(item => (
                         <DropdownItem 
                             ref={this.inputRef}
                             item={item} 
@@ -64,16 +51,14 @@ class Dropdown extends React.Component{
                             arrayIndex={arrayIndex}
                             itemsChange={itemsChange}
                             closeDrop={closeDrop}
-                            // onClick={itemsChange(item.name)}
                         />
-                    ))} */}
-                {/* </div> */}
-                <div className={css.custom_select} style={{width:258+"px"}}>
+                    ))}
+                </div>
+                {/* <div className={css.custom_select} style={{width:258+"px"}}>
                     <select 
                         className={css.DropTitle} 
                         onChange={this.handleClickAdd} 
-                        // defaultValue={this.state.selected || ''}
-                        // value={this.state.selected || ''}
+                        // styles={this.colourStyles}
                     >
                         <option value="" key="empty" className={css.DropEmpty}></option>
                         {arrayIssuesPrev.issues.map(item => (
@@ -86,7 +71,7 @@ class Dropdown extends React.Component{
                             </option>
                         ))}
                     </select>
-                </div>
+                </div> */}
             </>
         )
     }

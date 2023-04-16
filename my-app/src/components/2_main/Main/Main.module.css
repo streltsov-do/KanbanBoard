@@ -5,6 +5,7 @@
     /* height: 600px; */
     /* height: calc(100% - 55px*2); */
     height: 100%;
+    padding: 20px 0 32px 19px;
 
     display: flex;
     gap: 24px;

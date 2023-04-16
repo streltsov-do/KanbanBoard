@@ -84,11 +84,24 @@
     padding: 8px 7px;
     background: #FFFFFF;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
 }
-.selector select{
+/* .selector select{
     border-style: none;
     font-size: 14px;
     line-height: 16px;
+} */
+.selector_btn{
+    display: flex;
+    border-style: none;
+    background: transparent;
+    font-size: 14px;
+    line-height: 16px;
+}
+.selector_btn:hover{
+    text-decoration: underline;
 }
 
 @media screen and (width <= 505px) {

@@ -1,5 +1,7 @@
 .DropTitle{
     width: 258px;
+    /* min-width: 246px; */
+    /* max-width: 258px; */
     min-height: 35px;
     margin-bottom: 3px;
     
@@ -7,15 +9,10 @@
     border-radius: 5px;
     border-style: none;
 
-    padding: 12.5px 11px 0px 0px;
-    /* font-size: 18px;
-    line-height: 11px; */
+    padding: 12.5px 10px 0px 0px;
     
-    /* text-align: end; */
     display: flex;
     justify-content: flex-end;
-    /* vertical-align: top; */
-
 }
 
 .DropTitle:hover{
@@ -24,6 +21,8 @@
 
 .DropItem{
     width: 258px;
+    /* min-width: 246px; */
+    /* max-width: 258px; */
     min-height: 35px;
     
     background: #FFFFFF;
@@ -33,6 +32,9 @@
     padding: 7px 8px;
     font-size: 18px;
     line-height: 21px;
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: hidden;
     
     color: #000000;
 }
@@ -41,3 +43,15 @@
     background: #DEDEDE;
 }
 
+
+@media screen and (width <= 505px) {
+    .DropItem{
+        /* width: 258px; */
+        min-width: calc(100% );
+    }
+
+    .DropTitle{
+        /* width: 278px; */
+        min-width: 100%
+    }
+}

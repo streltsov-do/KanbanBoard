@@ -18,6 +18,7 @@
 }
 
 .DropTitle{
+    position: absolute;
     width: 258px;
     min-height: 35px;
     margin-bottom: 3px;
@@ -27,14 +28,8 @@
     border-style: none;
 
     padding: 12.5px 11px 0px 0px;
-    /* font-size: 18px;
-    line-height: 11px; */
-    
-    /* text-align: end; */
     display: flex;
     justify-content: flex-end;
-    /* vertical-align: top; */
-
 }
 
 .DropTitle:hover{
@@ -57,24 +52,42 @@
     padding: 7px 8px;
     font-size: 18px;
     line-height: 21px;
-    
-    color: #000000;
 }
 
 .DropItem:hover{
     background: #DEDEDE;
 }
-
-.custom_select{
+/* .custom_select{
     width: 258px;
 
+    position: relative;
+    appearance: none;
 }
 
-.custom_select select {
-    /* display: none; */
-}
+.custom_select select{
+    width: 258px;
 
-.select-selected {
+    display: none;
+    appearance: none;
+} */
+
+
+/* .custom_select::after{
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: rgb(255, 0, 0) transparent transparent transparent;
+} */
+
+/* .custom_select select {
+    display: none;
+} */
+
+/* .select-selected {
     background-color: DodgerBlue;
     background-color: rgb(184, 40, 107);
-}
+} */

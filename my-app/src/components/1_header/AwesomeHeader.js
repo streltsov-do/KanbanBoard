@@ -43,10 +43,12 @@ class AwesomeHeader extends React.Component{
                             <div className={css.dropdown}>
                                 <img className={css.selector_img} src={rectangle}></img>
                                 <div className={css.selector}>
-                                    <select>
+                                    <button className={css.selector_btn}>Profile</button>
+                                    <button className={css.selector_btn}>Log Out</button>
+                                    {/* <select>
                                         <option key="1">Profile</option>
                                         <option key="2">Log Out</option>
-                                    </select>
+                                    </select> */}
                                 </div>
                             </div>
                         :

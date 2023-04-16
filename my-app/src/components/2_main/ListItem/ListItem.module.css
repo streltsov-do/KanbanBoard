@@ -1,6 +1,7 @@
 .ListItem{
     
-    width: 258px;
+    min-width: 246px;
+    max-width: 258px;
     min-height: 35px;
     /* left: 12px;
     top: 44px; */
@@ -33,7 +34,7 @@
 
 @media screen and (width <= 505px) {
     .ListItem{
-        min-width: calc(100% - 12px - 12px);
-        width: auto;
+        /* min-width: calc(100% - 12px - 12px); */
+        width: 100%;
     }
 }

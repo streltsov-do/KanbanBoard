@@ -1,17 +1,8 @@
 .awesomeMain{
-    /* position: absolute; */
-    /* width: 1235px; */
-    /* height: 600px; */
     height: calc(100% - 55px*2);
-    /* left: 0px;
-    top: 0px; */
-    padding: 20px 0 32px 19px;
     position: relative;
-    /* height: 100%; */
-
-    /* display: flex; */
-    /* gap: 24px; */
     
+    min-width: 1235px;
 
     background: #0079BF;
 }

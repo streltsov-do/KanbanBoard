@@ -1,16 +1,15 @@
 .List{
     /* width: 282px; */
     min-width: 282px;
-    min-height: 197px;
-    max-height: 80vh;
+    max-height: 100%;
 
     background: #EBECF0;
     border-radius: 10px;
 
     padding: 12px 12px 8px 12px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    /* scrollbar-color: rebeccapurple green; */
+    /* overflow-y: visible; */
+    /* overflow-x: auto; */
+    word-wrap: break-word;
 }
 
 .List Ul{
@@ -33,20 +32,22 @@
 .List::-webkit-scrollbar-track {
     background: white;       
     margin: 29px 0;
+    border-radius: 5px;
 }
 .List::-webkit-scrollbar-thumb {
     background-color: #CBCBCB;
-    border-radius: 5px;    
+    border-radius: 5px;
 }
 
 
 .List::-webkit-scrollbar:horizontal {
     width: 12px;               
-    height: 12px;   
+    height: 12px;
 }
 .List::-webkit-scrollbar-track:horizontal {
     background: white;       
-    margin: 29px 0;
+    margin: 29px 0;  
+    border-radius: 5px;
 }
 .List::-webkit-scrollbar-thumb:horizontal {
     background-color: #CBCBCB;
@@ -55,7 +56,9 @@
 
 @media screen and (width <= 505px) {
     .List{
-        min-width: calc(100% - 21px - 35px);
-        height: 249px;
+        /* min-width: calc(100% - 21px - 35px); */
+        width: 282px;
+        max-height: 249px;
+        overflow-y: scroll;
     }
 }

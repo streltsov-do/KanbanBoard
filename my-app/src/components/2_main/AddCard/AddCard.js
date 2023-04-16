@@ -33,13 +33,11 @@ class AddCard extends React.Component {
 
     static getDerivedStateFromProps(props, state) {
         const {arrayIssuesPrev} = props;
-        // console.log("ARRAR",arrayIssuesPrev)
         let empty=false;
         if (props.arrayIndex!==0){
             empty=false
             if (arrayIssuesPrev.issues.length==0){
                 empty=true;
-                // console.log("TRUE",arrayIssuesPrev.issues.length)
             }
         }
         // this.setState({
