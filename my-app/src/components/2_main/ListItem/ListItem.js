@@ -14,7 +14,7 @@ class ListItem extends React.Component{
         const {id, name, desc} = this.props.items
         const {arrayIndex} = this.props
         
-        this.props.detailedShow(true, arrayIndex, id, name, desc)
+        this.props.toggleDescriptionView(true, arrayIndex, id, name, desc)
     }
 
     render () {

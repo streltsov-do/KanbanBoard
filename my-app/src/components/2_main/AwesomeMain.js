@@ -18,7 +18,7 @@ class AwesomeMain extends React.Component{
             detailedTitle: "",
             detailedDesc: "",
         };
-        this.detailedShow = this.detailedShow.bind(this)
+        this.toggleDescriptionView = this.toggleDescriptionView.bind(this)
     }
 
     componentDidMount() {
@@ -37,7 +37,7 @@ class AwesomeMain extends React.Component{
         }
     }
 
-    detailedShow(bool, arrayIndex, id, name, desc) {
+    toggleDescriptionView(bool, arrayIndex, id, name, desc) {
         this.setState({
             detailed:bool
         })
@@ -75,8 +75,8 @@ class AwesomeMain extends React.Component{
                             <Main 
                                 items           = {this.props.items} 
                                 itemsChange     = {this.props.itemsChange}
-                                detailedChange  = {this.props.detailedChange}
-                                detailedShow    = {this.detailedShow}
+                                changeDescription  = {this.props.changeDescription}
+                                toggleDescriptionView    = {this.toggleDescriptionView}
                             />
                         }
                     ></Route>
@@ -85,7 +85,7 @@ class AwesomeMain extends React.Component{
                         element={
                             // <ItemDesc 
                             //     items={this.props.items}
-                            //     detailedChange={this.props.detailedChange}
+                            //     changeDescription={this.props.changeDescription}
                             //     arrayIndex={detailedArrayIndex}
                             //     id={detailedId}
                             //     name={detailedName}
@@ -95,7 +95,7 @@ class AwesomeMain extends React.Component{
                                 items={this.props.items}
                                 arrayIndex={detailedArrayIndex}
                                 id={detailedId}
-                                detailedChange={this.props.detailedChange}
+                                changeDescription={this.props.changeDescription}
                                 name={detailedName}
                                 desc={detailedDesc}
                             />

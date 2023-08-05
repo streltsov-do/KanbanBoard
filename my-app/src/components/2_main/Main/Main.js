@@ -25,7 +25,7 @@ class Main extends React.Component{
     }
 
     render () {
-        const { items, itemsChange, detailedChange, detailedShow } = this.props;
+        const { items, itemsChange, changeDescription, toggleDescriptionView } = this.props;
 
         return(
             <div 
@@ -43,7 +43,7 @@ class Main extends React.Component{
                             max_height={this.state.height}
                             max_width={this.state.width}
 
-                            detailedShow={detailedShow}
+                            toggleDescriptionView={toggleDescriptionView}
                         />
                     ))}
                 </>

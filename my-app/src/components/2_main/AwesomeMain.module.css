@@ -2,7 +2,7 @@
     height: calc(100% - 55px*2);
     position: relative;
     
-    min-width: 1235px;
+    /* min-width: 1235px; */
 
     background: #0079BF;
 }

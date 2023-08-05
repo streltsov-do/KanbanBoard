@@ -22,7 +22,7 @@ class List extends React.Component{
     // }
 
     render(){
-        const { arrayIssues, arrayIndex , arrayIssuesPrev, itemsChange, detailedShow, detailedChange, max_height, max_width } = this.props;
+        const { arrayIssues, arrayIndex , arrayIssuesPrev, itemsChange, toggleDescriptionView, changeDescription, max_height, max_width } = this.props;
         
         const height_List = 130 + arrayIssues.issues.length*(15 + 35);
 
@@ -43,8 +43,8 @@ class List extends React.Component{
                             arrayIndex={arrayIndex} 
                             items={item} 
                             key={item.id}
-                            detailedShow={detailedShow}
-                            detailedChange={detailedChange}
+                            toggleDescriptionView={toggleDescriptionView}
+                            changeDescription={changeDescription}
                         />
                     ))}
                 </ul>

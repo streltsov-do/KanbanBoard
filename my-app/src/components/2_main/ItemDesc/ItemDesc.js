@@ -16,7 +16,7 @@ class ItemDesc extends React.Component {
     handleInput = () => {
         const {arrayIndex, id} = this.props
 
-        this.props.detailedChange(arrayIndex, id, this.inputRef.current.value)
+        this.props.changeDescription(arrayIndex, id, this.inputRef.current.value)
     }
 
     render() {

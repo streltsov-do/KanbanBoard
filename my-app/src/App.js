@@ -43,8 +43,8 @@ class App extends React.Component{
             index: 0,            
         };
         this.itemsChange = this.itemsChange.bind(this)
-        this.detailedChange = this.detailedChange.bind(this)
-        this.dataArrayChange = this.dataArrayChange.bind(this)
+        this.changeDescription = this.changeDescription.bind(this)
+        this.updateData = this.updateData.bind(this)
         
     }
 
@@ -96,14 +96,23 @@ class App extends React.Component{
         
     }
 
-    dataArrayChange(dataArray) {
-        
+    updateData(dataArray) {
         localStorage.setItem("dataArray",JSON.stringify(dataArray))
         this.setState({data:dataArray});
     }
 
 
     itemsChange(arrayIndex,val) {
+        let emptyVal=true;
+        for (var i=0;i<val.length;i++){
+            if (val[i]!=' '){
+                emptyVal=false;
+            }
+        }
+        if (emptyVal && (arrayIndex==0)){
+            return;
+        }
+
         const {data, index} = this.state;
 
         let dataArray = data;
@@ -136,11 +145,10 @@ class App extends React.Component{
         }
         
         dataArray[arrayIndex].issues.push(item_new);
-        // this.setState({data:dataArray});
-        this.dataArrayChange(dataArray);
+        this.updateData(dataArray);
     }
 
-    detailedChange(arrayIndex,id,desc) {
+    changeDescription(arrayIndex,id,desc) {
         const {data, index} = this.state;
 
         let dataArray = data;
@@ -166,7 +174,7 @@ class App extends React.Component{
         }
 
         // this.setState({data:dataArray});
-        this.dataArrayChange(dataArray);
+        this.updateData(dataArray);
     }
     
     render() {
@@ -177,7 +185,7 @@ class App extends React.Component{
                 <AwesomeMain 
                     items           ={this.state.data}
                     itemsChange     ={this.itemsChange}
-                    detailedChange  ={this.detailedChange}
+                    changeDescription  ={this.changeDescription}
                 />
                 
                 <AwesomeFooter 

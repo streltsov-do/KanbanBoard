@@ -53,20 +53,23 @@ class AddCard extends React.Component {
         const {arrayIssues, arrayIndex, arrayIssuesPrev, itemsChange} = this.props;
 
         const handleClick_Submit = () => {
+            this.setState({
+                clicked: false,
+                text_entered : false
+            })
             if (text_entered){
-                this.setState({
-                    clicked: false,
-                    text_entered : false
-                })
                 this.props.itemsChange(0,this.inputRef.current.value)
                 this.inputRef.current.value=""
             }
         }
 
-        const handleInput = (e) => {            
+        const handleInput = (e) => {
             this.setState({
                 text_entered: (this.inputRef.current.value!=="")
             })
+            if (this.inputRef.current.value.length>25){
+                this.inputRef.current.value = this.inputRef.current.value.slice(0,25);
+            }
         }
 
         const AddName_placeholder = () => {

@@ -5,7 +5,7 @@ import ItemDesc from "./ItemDesc";
 
 function ItemDescWrap({
                         items,
-                        detailedChange,
+                        changeDescription,
                         arrayIndex,
                         id,
                         name,
@@ -17,7 +17,7 @@ function ItemDescWrap({
                 items={items}
                 arrayIndex={arrayIndex}
                 id={params.id}
-                detailedChange={detailedChange}
+                changeDescription={changeDescription}
                 name={name}
                 desc={desc}
             ></ItemDesc>
