@@ -1,48 +1,45 @@
-.AddCard{
-    font-size: 18px;
-    line-height: 21px;
-    color: #5E6C84;
-    display: flex;
-    align-items: center;
-    border-style:none;
+.AddCard {
+  font-size: 18px;
+  line-height: 21px;
+  color: #5e6c84;
+  display: flex;
+  align-items: center;
+  border-style: none;
 
-    border-radius: 10px;
-    margin-bottom: 8px;
-    border-radius: 5px;
-    background: #EBECF0;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  background: #ebecf0;
 }
 
-.AddCard:hover{
-    background-color: #FFFFFF;
+.AddCard:hover {
+  background-color: #ffffff;
 }
 
-.AddCard:disabled{
-    cursor:initial;
-    background-color: rgb(255, 211, 220);
+.AddCard:disabled {
+  cursor: initial;
+  background-color: rgb(255, 211, 220);
 }
 
-.plus{
-    margin-right: 4px;
+.plus {
+  margin-right: 4px;
 }
 
-.Submit{
-    background-color: #0079BF;
-    color: white;
-    width: 102px;
-    display: flex;
-    justify-content: center;
-    border-radius: 5px;
+.Submit {
+  background-color: #0079bf;
+  color: white;
+  width: 102px;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
 }
 
-.Submit:hover{
-    background-color: blueviolet;
+.Submit:hover {
+  background-color: blueviolet;
 }
 
 @media screen and (width <= 505px) {
-
-    .DropTitle{
-        min-width: 100%
-    }
-    
+  .DropTitle {
+    min-width: 100%;
+  }
 }
-

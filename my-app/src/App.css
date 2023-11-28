@@ -3,18 +3,17 @@
   flex-direction: column;
 } */
 
-
 body * {
   box-sizing: border-box;
 
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
 }
 
-html{
+html {
   height: 100%;
-  width: 100%;
+  /* width: 100%; */
 }
 body {
   /* display: flex;
@@ -22,6 +21,7 @@ body {
 
   height: 100%;
   width: 100%;
+  background: #0079bf;
 }
 
 #root {
@@ -31,12 +31,12 @@ body {
   width: 100%;
 }
 
-button{
-  cursor: pointer
+button {
+  cursor: pointer;
 }
 
 @media screen and (width <= 505px) {
-  html{
+  html {
     height: auto;
     /* width: 100%; */
   }

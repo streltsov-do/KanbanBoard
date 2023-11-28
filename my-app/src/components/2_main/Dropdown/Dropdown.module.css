@@ -1,61 +1,60 @@
-.container{
-    border-radius: 5px;
-    background: #FFFFFF;
+.container {
+  border-radius: 5px;
+  background: #ffffff;
 }
 
-.title{
-    margin-bottom: 15px;
-    
-    font-size: 18px;
-    line-height: 21px;
+.title {
+  margin-bottom: 15px;
 
-    color: #000000;
+  font-size: 18px;
+  line-height: 21px;
+
+  color: #000000;
 }
 
-.arrowdown{
-    width: 18px;
-    height: 12.5px;
+.arrowdown {
+  width: 18px;
+  height: 12.5px;
 }
 
-.DropTitle{
-    position: absolute;
-    width: 258px;
-    min-height: 35px;
-    margin-bottom: 3px;
-    
-    background: #FFFFFF;
-    border-radius: 5px;
-    border-style: none;
+.DropTitle {
+  position: absolute;
+  width: 258px;
+  min-height: 35px;
+  margin-bottom: 3px;
 
-    padding: 12.5px 11px 0px 0px;
-    display: flex;
-    justify-content: flex-end;
+  background: #ffffff;
+  border-radius: 5px;
+  border-style: none;
+
+  padding: 12.5px 11px 0px 0px;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.DropTitle:hover{
-    background: #DEDEDE;
+.DropTitle:hover {
+  background: #dedede;
 }
 
-.DropEmpty{
-    display: none
+.DropEmpty {
+  display: none;
 }
 
+.DropItem {
+  width: 258px;
+  min-height: 35px;
 
-.DropItem{
-    width: 258px;
-    min-height: 35px;
-    
-    background: #FFFFFF;
-    border-radius: 5px;
-    border-style: none;
+  background: #ffffff;
+  border-radius: 5px;
+  border-style: none;
 
-    padding: 7px 8px;
-    font-size: 18px;
-    line-height: 21px;
+  padding: 7px 8px;
+  font-size: 18px;
+  line-height: 21px;
 }
 
-.DropItem:hover{
-    background: #DEDEDE;
+.DropItem:hover {
+  background: #dedede;
 }
 /* .custom_select{
     width: 258px;
@@ -70,7 +69,6 @@
     display: none;
     appearance: none;
 } */
-
 
 /* .custom_select::after{
     position: absolute;

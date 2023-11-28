@@ -1,15 +1,15 @@
-.awesomeMain{
-    height: calc(100% - 55px*2);
-    position: relative;
-    
-    /* min-width: 1235px; */
+.awesomeMain {
+  height: calc(100% - 55px * 2);
+  position: relative;
+  /* min-width: 1235px; */
+  /* width: 100%; */
 
-    background: #0079BF;
+  /* background: #0079bf; */
 }
 
 @media screen and (width <= 505px) {
-    .awesomeMain{
-        padding: 20px 35px 32px 21px;
-        min-height: 100vh;
-    }
+  .awesomeMain {
+    padding: 20px 35px 32px 21px;
+    min-height: 100vh;
+  }
 }

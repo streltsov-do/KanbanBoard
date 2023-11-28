@@ -1,29 +1,29 @@
-.footer{
-    display: flex;
-    justify-content: space-between;
+.footer {
+  display: flex;
+  justify-content: space-between;
 
-    align-items: center;
-    height: 55px;
-    padding-left: 21px;
-    padding-right: 21px;
-    
-    background: #0067A3;
+  align-items: center;
+  height: 55px;
+  padding-left: 21px;
+  padding-right: 21px;
+
+  background: #0067a3;
 }
 
-.footer_text{
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
+.footer_text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
 
-    color: #FFFFFF;
+  color: #ffffff;
 }
 
-.taskContainer{
-    display: flex;
-    justify-self: flex-start;
+.taskContainer {
+  display: flex;
+  justify-self: flex-start;
 }
-.task1{
-    margin-right: 35px;
+.task1 {
+  margin-right: 35px;
 }

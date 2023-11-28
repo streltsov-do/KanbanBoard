@@ -1,57 +1,56 @@
-.DropTitle{
-    width: 258px;
-    /* min-width: 246px; */
-    /* max-width: 258px; */
-    min-height: 35px;
-    margin-bottom: 3px;
-    
-    background: #FFFFFF;
-    border-radius: 5px;
-    border-style: none;
+.DropTitle {
+  width: 258px;
+  /* min-width: 246px; */
+  /* max-width: 258px; */
+  min-height: 35px;
+  margin-bottom: 3px;
 
-    padding: 12.5px 10px 0px 0px;
-    
-    display: flex;
-    justify-content: flex-end;
+  background: #ffffff;
+  border-radius: 5px;
+  border-style: none;
+
+  padding: 12.5px 10px 0px 0px;
+
+  display: flex;
+  justify-content: flex-end;
 }
 
-.DropTitle:hover{
-    background: #DEDEDE;
+.DropTitle:hover {
+  background: #dedede;
 }
 
-.DropItem{
-    width: 258px;
-    /* min-width: 246px; */
-    /* max-width: 258px; */
-    min-height: 35px;
-    
-    background: #FFFFFF;
-    border-radius: 5px;
-    border-style: none;
+.DropItem {
+  width: 258px;
+  /* min-width: 246px; */
+  /* max-width: 258px; */
+  min-height: 35px;
 
-    padding: 7px 8px;
-    font-size: 18px;
-    line-height: 21px;
-    display: flex;
-    justify-content: flex-start;
-    overflow-x: hidden;
-    
-    color: #000000;
+  background: #ffffff;
+  border-radius: 5px;
+  border-style: none;
+
+  padding: 7px 8px;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: hidden;
+
+  color: #000000;
 }
 
-.DropItem:hover{
-    background: #DEDEDE;
+.DropItem:hover {
+  background: #dedede;
 }
-
 
 @media screen and (width <= 505px) {
-    .DropItem{
-        /* width: 258px; */
-        min-width: calc(100% );
-    }
+  .DropItem {
+    /* width: 258px; */
+    min-width: calc(100%);
+  }
 
-    .DropTitle{
-        /* width: 278px; */
-        min-width: 100%
-    }
+  .DropTitle {
+    /* width: 278px; */
+    min-width: 100%;
+  }
 }
