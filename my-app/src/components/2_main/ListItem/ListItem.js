@@ -18,13 +18,9 @@ class ListItem extends React.Component {
   };
 
   render() {
-    const { arrayIndex, id, name, desc } = this.props.items;
+    const { id, name } = this.props.items;
     return (
       <>
-        {/* <li 
-                    className={css.ListItem} 
-                    key={id} 
-                > */}
         <Link
           className={css.ListItem}
           key={id}
@@ -33,7 +29,6 @@ class ListItem extends React.Component {
         >
           {name}
         </Link>
-        {/* </li> */}
       </>
     );
   }

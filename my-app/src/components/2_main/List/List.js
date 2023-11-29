@@ -32,7 +32,7 @@ class List extends React.Component {
       max_width,
     } = this.props;
 
-    let height_List = 130 + arrayIssues.issues.length * (15 + 35);
+    let height_List = 140 + arrayIssues.issues.length * (15 + 35);
 
     let overflowY_1 =
       height_List > max_height || (max_width < 550 && height_List > 249)
