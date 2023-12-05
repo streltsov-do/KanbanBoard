@@ -16,7 +16,7 @@
 
 - **Finished** (законченные задачи).
 
-  ![kanban1](.\readme\kanban1.jpg)
+  ![kanban1](E:\_git\SF\P5_React\M20_KanbanBoard\readme\kanban1.jpg)
 
   
 
@@ -30,17 +30,17 @@
 
   1) Нажать кнопку *«+ Add card»*.
   
-  ![kanban2](.\readme\kanban2.jpg)
+  ![kanban2](./readme/kanban2.jpg)
   
   2) Заполнить название задачи.
   
   3) Нажать кнопку *«Submit»*.
 
-![kanban3](.\readme\kanban3.jpg)
+![kanban3](./readme/kanban3.jpg)
 
 Задача появится в бэклоге (при условии, что введено название ).
 
-![image-20231129223915793](.\readme\kanban4.png)
+![image-20231129223915793](./readme/kanban4.png)
 
 
 
@@ -49,17 +49,17 @@
 - Задачи для списка *Ready* берутся из списка задач *Backlog*, для *In Progress* - из *Ready*, и для *Finished* - из *In Progress*, соответственно.
 - При отсутствии задач в предыдущем списке - кнопка "*+Add card*" неактивна и выделяется бледно-красным цветом.
 
-![kanban4](.\readme\kanban5.jpg)
+![kanban4](./readme/kanban5.jpg)
 
 #### 3. Детальная страница задачи
 
 - При клике на заголовок задачи осуществляется переход на детальную страницу задачи.
 
-  ![kanban5](E:\_git\SF\P5_React\M20_KanbanBoard\readme\kanban6.jpg)
+  ![kanban5](./readme/kanban6.jpg)
 
 - На детальной странице задачи можно изменять описание задачи при клике на поле ввода. Если описание задачи оставить незаполненным - будет отображаться надпись `"This task has no description"`.
 
-![kanban6](E:\_git\SF\P5_React\M20_KanbanBoard\readme\kanban7.jpg)
+![kanban6](./readme/kanban7.jpg)
 
  - При клике на крестик в правом верхнем углу осуществляется переход обратно на главную страницу.
 
@@ -72,7 +72,7 @@
 - - **Active tasks** — количество задач в списке *Backlog.*
   - **Finished tasks** — количество задач в списке *Finished.*
   
-  ![kanban7](E:\_git\SF\P5_React\M20_KanbanBoard\readme\kanban8.jpg)
+  ![kanban7](./readme/kanban8.jpg)
   
   
 
@@ -80,11 +80,11 @@
 
 - При клике на блок в правом верхнем углу страницы — на аватар пользователя со стрелкой, появляется выпадающее меню.
 
-  ![kanban8](E:\_git\SF\P5_React\M20_KanbanBoard\readme\kanban9.jpg)
+  ![kanban8](./readme/kanban9.jpg)
 
 - При клике на пункты меню ничего не происходит, но выбранный пункт меню подчёркивается.
 
-  ![kanban9](E:\_git\SF\P5_React\M20_KanbanBoard\readme\kanban10.jpg)
+  ![kanban9](./readme/kanban10.jpg)
 
 #### 6. Сохранение внесенных изменений
 
