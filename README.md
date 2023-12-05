@@ -16,7 +16,7 @@
 
 - **Finished** (законченные задачи).
 
-  ![kanban1](E:\_git\SF\P5_React\M20_KanbanBoard\readme\kanban1.jpg)
+  ![kanban1](./readme/kanban1.jpg)
 
   
 
